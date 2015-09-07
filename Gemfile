@@ -12,6 +12,12 @@ end
 # #2
 group :development do
   gem 'sqlite3'
+  gem 'better_errors'
+end
+
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'foreman'
 end
 
 # Use SCSS for stylesheets
