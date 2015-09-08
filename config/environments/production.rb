@@ -14,9 +14,9 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  Rails.application.routes.default_url_options[:host] = 'infinite-meadow-6444.herokuapp.com'
 
-  config.action_mailer.default_url_options = { :host => 'infinite-meadow-6444.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # config.action_mailer.default_url_options = { :host => 'http://peaceful-depths-6242.herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true

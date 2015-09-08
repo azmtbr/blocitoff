@@ -7,10 +7,41 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
 
+  <div class="container">
+     <ul class="nav nav-tabs">
+          <li><%= link_to "Home", root_path %></li>
+        <div class="pull-right user-info">
+          <ul class="nav nav-tabs">
+           <% if user_signed_in? %>
+              <li><%= link_to "Profile", edit_user_registration_path %></li>
+              <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+          </ul>
+           <% else %>
+             <%= link_to "Sign In", new_user_session_path %> or
+             <%= link_to "Sign Up", new_user_registration_path %>
+           <% end %>
+      </ul>
+  </div>
 
-<%= yield %>
+
+  <div class="container">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
+  </div>
+
+    <%= yield :top_content %>
+
+  <div class="container">
+    <h1><%= yield :header %></h1>
+
+    <%= yield %>
+  </div>
 
 </body>
 </html>
