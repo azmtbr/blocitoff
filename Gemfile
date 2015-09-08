@@ -33,4 +33,6 @@ gem 'turbolinks'
 
 gem 'devise'
 
+gem 'figaro'
+
 gem 'bootstrap-sass'
