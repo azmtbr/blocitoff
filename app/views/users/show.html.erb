@@ -1,6 +1,10 @@
 <h1>User Profile</h1>
 
 
-<h3><%= @user.email %></h3>
+<h3><%=current_user.email %></h3>
 
+<%= render @items %>
+
+
+<p><%= link_to "Create new todo item", new_item_path %></p>
 <p><%= link_to "Edit Profile", edit_user_registration_path %></p>

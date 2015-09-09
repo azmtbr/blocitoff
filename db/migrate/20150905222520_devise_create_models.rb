@@ -2,7 +2,7 @@ class DeviseCreateModels < ActiveRecord::Migration
   def change
     create_table(:models) do |t|
       ## Database authenticatable
-      t.string :name
+
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
 
@@ -35,7 +35,7 @@ class DeviseCreateModels < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    add_index :models, :name
+    
     add_index :models, :email,                unique: true
     add_index :models, :reset_password_token, unique: true
     # add_index :models, :confirmation_token,   unique: true
