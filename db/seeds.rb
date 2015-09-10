@@ -2,7 +2,6 @@ require 'faker'
 
 
 # Create users
-
 5.times do
   user = User.new(
     name:     Faker::Name.name,
@@ -19,10 +18,17 @@ users = User.all
   item = Item.create(
     user: users.sample,
     name: Faker::Lorem.sentence
-
   )
   item.update_attribute(:created_at, rand(10.minutes .. 6.days).ago)
 end
+
+user = User.new(
+  name:     "Jon Malis",
+  email:    "monkeydogphotography@gmail.com",
+  password: "konibear"
+)
+user.skip_confirmation!
+user.save
 
 puts "#{User.count} users created"
 puts "#{Item.count} items created"
