@@ -25,7 +25,7 @@ class ItemsController < ApplicationController
       @item = Item.find(params[:id])
 
         if @item.destroy
-          flash[:notice] = "\"#{@item.name}\" was deleted successfully."
+          flash[:notice] = "Item was deleted successfully."
           redirect_to current_user
         else
           flash[:error] = "There was an error deleting the post."
