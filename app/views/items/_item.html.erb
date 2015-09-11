@@ -1,5 +1,17 @@
-<div class="media">
-   <div class="media-body">
-     <h4><%= link_to item.name, item %><%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %></h4>
-  </div>
+
+<div class="table-hover">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Todo Item</th>
+        <th>Completed?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= link_to item.name, item %></td>
+        <td><%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
