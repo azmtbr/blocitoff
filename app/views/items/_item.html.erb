@@ -4,12 +4,14 @@
     <thead>
       <tr>
         <th>Todo Item</th>
+        <th>Created at</th>
         <th>Completed?</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td><%= link_to item.name, item %></td>
+        <td><%=  "#{time_ago_in_words(item.created_at)} ago"%></td>
         <td><%= link_to "", item, method: :delete, class: 'glyphicon glyphicon-ok' %></td>
       </tr>
     </tbody>

@@ -1,3 +1,18 @@
-
-  <h3><%= @item.name %><%= "   " %><%= link_to "", @item, method: :delete, class: 'glyphicon glyphicon-ok' %></h3>
-  <p>created by <%= current_user.email %></p>
+<div class="table-bordered">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Todo Item</th>
+        <th>Created at</th>
+        <th>Completed?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @item.name %></td>
+        <td><%=  "#{distance_of_time_in_words(@item.created_at)} ago"%></td>
+        <td><%= link_to "", @item, method: :delete, class: 'glyphicon glyphicon-ok' %></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
