@@ -18,6 +18,7 @@ end
 group :development, :test do
   gem 'rspec-rails'
   gem 'foreman'
+  gem 'shoulda-matchers'
 end
 
 # Use SCSS for stylesheets

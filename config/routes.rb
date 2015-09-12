@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   root to: "welcome#index"
 
   resources :users, only: [:show] do
-      resources :items, only: [:create]
+      resources :items
   end
 
 
