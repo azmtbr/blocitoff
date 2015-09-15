@@ -7,8 +7,8 @@
     <% if current_user %>
         Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
     <% else %>
-        <%= link_to "Sign In", new_user_session_path %> or
-        <%= link_to "Sign Up", new_user_registration_path %>
+        <button type="button" class="btn-btn primary"><%= link_to "Sign In", new_user_session_path %></button> or
+        <button type="button" class="btn-btn primary"><%= link_to "Sign Up", new_user_registration_path %></button>
     <% end %>
   </p>
   </div>

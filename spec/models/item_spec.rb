@@ -9,6 +9,16 @@ RSpec.describe Item, type: :model do
 
   it { should belong_to(:user) }
 
+  # context "methods" do
+  #   describe "days left calculations" do
+  #     it "should know its days left" do
+  #       item.days_left < Date.today + 8.days
+  #     end
+  #   end
+  # end
+  #
+
+
 
 
 end

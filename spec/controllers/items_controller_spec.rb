@@ -1,12 +1,17 @@
 require 'rails_helper'
+require 'faker'
 
 RSpec.describe ItemsController, type: :controller do
 
-  describe "GET #create" do
-    it "returns http success" do
-      get :create
-      expect(response).to have_http_status(:success)
+
+
+  describe "POST #new" do
+    before { get :new }
+
+      it {should respond_with(:ok) }
+      
     end
   end
+
 
 end
