@@ -6,8 +6,11 @@ require 'rails_helper'
 
 
     describe "GET #show" do
-      before { get :show }
+      let(:user) { create(:user) }
 
-      it { should respond_with(:success) }
+    it "returns http success" do
+      get :show
+      expect(response).to have_http_status(:success)
     end
   end
+end

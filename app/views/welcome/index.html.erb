@@ -5,7 +5,7 @@
   <p>Blocitoff is an easy way to manage your daily tasks.</p>
   <p>
     <% if current_user %>
-        Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        Hello <%= current_user.email %>! <button type="button" class="btn-btn primary"><%= link_to "Sign out", destroy_user_session_path, method: :delete %></button>
     <% else %>
         <button type="button" class="btn-btn primary"><%= link_to "Sign In", new_user_session_path %></button> or
         <button type="button" class="btn-btn primary"><%= link_to "Sign Up", new_user_registration_path %></button>

@@ -39,3 +39,5 @@ gem 'figaro'
 gem 'bootstrap-sass'
 
 gem 'faker'
+
+gem 'whenever', :require => false

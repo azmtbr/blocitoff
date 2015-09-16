@@ -9,9 +9,6 @@ RSpec.describe ItemsController, type: :controller do
     before { get :new }
 
       it {should respond_with(:ok) }
-      
+
     end
   end
-
-
-end
