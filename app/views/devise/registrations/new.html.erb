@@ -26,6 +26,11 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :is_public, "Set profile as private" %>
+    <%= f.check_box :is_public, :checked => false %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
